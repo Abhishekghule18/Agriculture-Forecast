@@ -1,5 +1,7 @@
+import 'package:agri/location.dart';
 import 'package:agri/screens/homepage.dart';
 import 'package:agri/screens/login.dart';
+import 'package:agri/screens/sample.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.teal,
       ),
-      home: LoginScreen(),
+      home: GetLocation(),
     );
   }
 }
