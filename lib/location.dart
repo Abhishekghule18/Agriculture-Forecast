@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -8,18 +10,57 @@ class GetLocation extends StatefulWidget {
 
 class _GetLocationState extends State<GetLocation> {
   var locationMessage = "";
-
+  var apiKey = '5ad105a2ca3f7716284999d27d1b04e5';
+  double lat, lon;
   void getCurrentLocation() async {
     var position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+        desiredAccuracy: LocationAccuracy.best);
 
     var lastPosition = await Geolocator.getLastKnownPosition();
     print(lastPosition);
-    
-    
+
     setState(() {
-      locationMessage = "$position.altitude ,$position.latitude , $position.longitude" ;
+      locationMessage =
+          "$position.altitude ,$position.latitude , $position.longitude";
+      lat = position.latitude;
+      lon = position.longitude;
     });
+    getData();
+  }
+
+  @override
+  void initState() {
+    getCurrentLocation();
+  }
+
+  void getData() async {
+    var url1 = Uri.https(
+        'api.openweathermap.org',
+        'data/2.5/weather?lat=20.0252268081483&lon=73.76779917236001&appid=$apiKey',
+        {'q': '{https}'});
+    var url =
+        "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey";
+    //var url = 'http://api.openweathermap.org/data/2.5/weather?lat=14.6102473&121.0043158&appid=secret';
+    //var url = 'http://api.openweathermap.org/data/2.5/weather?lat=14.6102473&lon=121.0043158&appid=secret';
+    //20.0252268081483, 73.76779917236001
+    print(url);
+
+    var request = await http.get(Uri.parse(url));
+    print(request.body.toString());
+    if (request.statusCode == 200) {
+      String data = request.body.toString();
+      var city = jsonDecode(data)['name'];
+      var description = jsonDecode(data)['weather'][0]['description'];
+
+      print('Welcome to $city city!');
+      print('Weather: $description');
+    } else {
+      print(request.statusCode);
+      print(
+          'Latitude is: $lat *** Longitude is: $lon'); // this prints longitude and latitude values
+      print(
+          'request $url'); // when I entered the url in postman, I'm getting the same error 400
+    }
   }
 
   @override
