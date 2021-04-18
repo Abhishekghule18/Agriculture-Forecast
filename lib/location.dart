@@ -34,10 +34,6 @@ class _GetLocationState extends State<GetLocation> {
   }
 
   void getData() async {
-    var url1 = Uri.https(
-        'api.openweathermap.org',
-        'data/2.5/weather?lat=20.0252268081483&lon=73.76779917236001&appid=$apiKey',
-        {'q': '{https}'});
     var url =
         "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey";
     //var url = 'http://api.openweathermap.org/data/2.5/weather?lat=14.6102473&121.0043158&appid=secret';
