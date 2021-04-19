@@ -3,6 +3,7 @@ import 'package:agri/screens/login.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
+  static const String id = 'sign_up_screen';
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
 }
@@ -239,7 +240,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       : Text(
                                           "Signup",
                                           style: TextStyle(
-                                            color: Colors.white,
+                                              color: Colors.white,
                                               fontWeight: FontWeight.bold),
                                         ),
                                 ),

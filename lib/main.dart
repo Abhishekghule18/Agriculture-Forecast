@@ -1,8 +1,21 @@
 import 'package:agri/location.dart';
+import 'package:agri/screens/cropList.dart';
 import 'package:agri/screens/homepage.dart';
 import 'package:agri/screens/login.dart';
 import 'package:agri/screens/sample.dart';
 import 'package:flutter/material.dart';
+
+import 'location.dart';
+import 'location.dart';
+import 'location.dart';
+import 'screens/homepage.dart';
+import 'screens/homepage.dart';
+import 'screens/homepage.dart';
+import 'screens/homepage.dart';
+import 'screens/login.dart';
+import 'screens/login.dart';
+import 'screens/signup.dart';
+import 'screens/signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +40,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.teal,
       ),
-      home: GetLocation(),
+      routes: {
+        MyHomePage.id: (context) => MyHomePage(),
+        LoginScreen.id: (context) => LoginScreen(),
+        SignUpScreen.id: (context) => SignUpScreen(),
+        GetLocation.id: (context) => GetLocation(),
+        CropList.id: (context) => CropList(),
+      },
+      initialRoute: CropList.id,
     );
   }
 }

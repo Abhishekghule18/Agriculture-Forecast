@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CurrentWeather extends StatefulWidget {
+  static const String id = 'current_weather';
   @override
   _CurrentWeatherState createState() => _CurrentWeatherState();
 }
@@ -12,12 +13,12 @@ class _CurrentWeatherState extends State<CurrentWeather> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.005,
+          ),
           Center(
             child: Container(
-              decoration: BoxDecoration(
-                
-              ),
+              decoration: BoxDecoration(),
               child: Card(
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,

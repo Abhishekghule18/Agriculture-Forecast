@@ -3,6 +3,7 @@ import 'package:agri/screens/sample.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
+  static const String id = 'my_home_page';
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }

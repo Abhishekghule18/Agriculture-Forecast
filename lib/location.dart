@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
 class GetLocation extends StatefulWidget {
+  static const String id = 'get_location';
   @override
   _GetLocationState createState() => _GetLocationState();
 }
