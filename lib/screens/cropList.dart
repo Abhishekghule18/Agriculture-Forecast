@@ -1,36 +1,43 @@
+import 'package:agri/crops/bajra.dart';
+import 'package:agri/crops/rice.dart';
+import 'package:agri/crops/sugarCane.dart';
+import 'package:agri/crops/wheat.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CropList extends StatelessWidget {
   static const String id = 'crop_list';
+
+  List<CropButton> cropButtons = [];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
         color: Colors.white,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
           children: [
             CropButton(
               cropName: 'Wheat',
               onPressed: () {
-                print('wheat data');
+                Navigator.pushNamed(context, WheatData.id);
               },
             ),
             CropButton(
                 cropName: 'Rice',
                 onPressed: () {
-                  print('rice data');
+                  Navigator.pushNamed(context, RiceData.id);
                 }),
             CropButton(
                 cropName: 'Bajra',
                 onPressed: () {
-                  print('Bajra data');
+                  Navigator.pushNamed(context, BajraData.id);
                 }),
             CropButton(
                 cropName: 'SugarCane',
                 onPressed: () {
-                  print('SugarCane data');
+                  Navigator.pushNamed(context, SugarCaneData.id);
                 }),
           ],
         ),
@@ -46,16 +53,26 @@ class CropButton extends StatelessWidget {
   final String cropName;
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      color: Colors.green,
+    return MaterialButton(
+      height: 40.0,
+      color: Colors.teal,
       onPressed: onPressed,
-      minWidth: 40.0,
       child: Text(
         cropName,
+        textAlign: TextAlign.left,
         style: TextStyle(
-          fontSize: 20.0,
+          fontSize: 22.0,
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.w700,
+          color: Colors.white,
         ),
       ),
     );
   }
 }
+// Column(
+// crossAxisAlignment: CrossAxisAlignment.stretch,
+// children: [
+
+// ],
+// ),

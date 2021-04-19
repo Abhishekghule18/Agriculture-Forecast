@@ -1,3 +1,7 @@
+import 'package:agri/crops/bajra.dart';
+import 'package:agri/crops/rice.dart';
+import 'package:agri/crops/sugarCane.dart';
+import 'package:agri/crops/wheat.dart';
 import 'package:agri/location.dart';
 import 'package:agri/screens/cropList.dart';
 import 'package:agri/screens/homepage.dart';
@@ -37,6 +41,10 @@ class MyApp extends StatelessWidget {
         SignUpScreen.id: (context) => SignUpScreen(),
         GetLocation.id: (context) => GetLocation(),
         CropList.id: (context) => CropList(),
+        WheatData.id: (context) => WheatData(),
+        RiceData.id: (context) => RiceData(),
+        BajraData.id: (context) => BajraData(),
+        SugarCaneData.id: (context) => SugarCaneData(),
       },
       initialRoute: MyHomePage.id,
     );
