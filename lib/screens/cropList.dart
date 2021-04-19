@@ -11,15 +11,6 @@ class CropList extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              height: 30.0,
-              child: Text(
-                'Space for button',
-                style: TextStyle(
-                  fontSize: 15.0,
-                ),
-              ),
-            ),
             CropButton(
               cropName: 'Wheat',
               onPressed: () {
@@ -30,6 +21,16 @@ class CropList extends StatelessWidget {
                 cropName: 'Rice',
                 onPressed: () {
                   print('rice data');
+                }),
+            CropButton(
+                cropName: 'Bajra',
+                onPressed: () {
+                  print('Bajra data');
+                }),
+            CropButton(
+                cropName: 'SugarCane',
+                onPressed: () {
+                  print('SugarCane data');
                 }),
           ],
         ),

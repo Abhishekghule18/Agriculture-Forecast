@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         GetLocation.id: (context) => GetLocation(),
         CropList.id: (context) => CropList(),
       },
-      initialRoute: CropList.id,
+      initialRoute: MyHomePage.id,
     );
   }
 }
