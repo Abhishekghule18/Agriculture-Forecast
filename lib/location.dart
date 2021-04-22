@@ -31,6 +31,7 @@ class _GetLocationState extends State<GetLocation> {
 
   @override
   void initState() {
+    super.initState();
     getCurrentLocation();
   }
 
