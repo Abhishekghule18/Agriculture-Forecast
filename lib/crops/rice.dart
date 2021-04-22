@@ -41,7 +41,7 @@ class RiceData extends StatelessWidget {
                     height: 2.0,
                   ),
                   Text(
-                    'It requires uniformly high temperature varying between 21°C and 30°C.',
+                    'It requires uniformly medium temperature varying between 15° and 27° C.',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontStyle: FontStyle.italic,
@@ -64,7 +64,7 @@ class RiceData extends StatelessWidget {
                     height: 2.0,
                   ),
                   Text(
-                    'The modest requirement of water can be met by an average annual rainfall of 50- 100 cm',
+                    'The modest requirement of water can be met by slightly more than average annual rainfall of 100- 150 cm',
                     style: TextStyle(
                       fontSize: 16.0,
                       fontStyle: FontStyle.italic,
