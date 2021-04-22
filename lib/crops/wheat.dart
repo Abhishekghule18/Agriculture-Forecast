@@ -5,16 +5,75 @@ class WheatData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/location_background.jpg'),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-                Colors.white.withOpacity(0.8), BlendMode.dstATop),
+      appBar: AppBar(
+        title: Text(
+          'Wheat',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w900,
+            fontSize: 28.0,
           ),
         ),
-        constraints: BoxConstraints.expand(),
+      ),
+      body: Column(
+        children: [
+          Image(
+            image: AssetImage('assets/wheat.jpg'),
+          ),
+          Container(
+            color: Colors.white12,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'TEMPERATURE :',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 2.0,
+                  ),
+                  Text(
+                    'It requires uniformly high temperature varying between 21°C and 30°C.',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    'RAINFALL :',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 2.0,
+                  ),
+                  Text(
+                    'The modest requirement of water can be met by an average annual rainfall of 50- 100 cm',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

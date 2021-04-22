@@ -1,4 +1,5 @@
 import 'package:agri/crops/bajra.dart';
+import 'package:agri/crops/cotton.dart';
 import 'package:agri/crops/rice.dart';
 import 'package:agri/crops/sugarCane.dart';
 import 'package:agri/crops/wheat.dart';
@@ -30,7 +31,7 @@ class CropList extends StatelessWidget {
                   Navigator.pushNamed(context, RiceData.id);
                 }),
             CropButton(
-                cropName: 'Bajra',
+                cropName: 'Bajra (Pearl Millet)',
                 onPressed: () {
                   Navigator.pushNamed(context, BajraData.id);
                 }),
@@ -38,6 +39,11 @@ class CropList extends StatelessWidget {
                 cropName: 'SugarCane',
                 onPressed: () {
                   Navigator.pushNamed(context, SugarCaneData.id);
+                }),
+            CropButton(
+                cropName: 'Cotton',
+                onPressed: () {
+                  Navigator.pushNamed(context, CottonData.id);
                 }),
           ],
         ),
@@ -55,16 +61,18 @@ class CropButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       height: 40.0,
-      color: Colors.teal,
+      color: Colors.white,
       onPressed: onPressed,
+      elevation: 0.8,
+      splashColor: Colors.grey,
       child: Text(
         cropName,
         textAlign: TextAlign.left,
         style: TextStyle(
           fontSize: 22.0,
           fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.w700,
-          color: Colors.white,
+          fontWeight: FontWeight.w800,
+          color: Colors.black54,
         ),
       ),
     );

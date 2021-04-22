@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SugarCaneData extends StatelessWidget {
-  static const String id = 'sugarCane_data';
+class CottonData extends StatelessWidget {
+  static const String id = 'cotton_data';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'SugarCane',
+          'Cotton',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontStyle: FontStyle.italic,
@@ -19,7 +19,7 @@ class SugarCaneData extends StatelessWidget {
       body: Column(
         children: [
           Image(
-            image: AssetImage('assets/sugarcane.jpg'),
+            image: AssetImage('assets/cotton.jpg'),
           ),
           Container(
             color: Colors.white12,
