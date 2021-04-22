@@ -63,7 +63,7 @@ class CropButton extends StatelessWidget {
       height: 40.0,
       color: Colors.white,
       onPressed: onPressed,
-      elevation: 0.8,
+      elevation: 0.9,
       splashColor: Colors.grey,
       child: Text(
         cropName,

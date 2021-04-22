@@ -36,7 +36,7 @@ class _GetLocationState extends State<GetLocation> {
 
   void getData() async {
     var url =
-        "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey";
+        "https://api.openweathermap.org/data/2.5/forecast/daily?lat=$lat&lon=$lon&appid=$apiKey";
     //var url = 'http://api.openweathermap.org/data/2.5/weather?lat=14.6102473&121.0043158&appid=secret';
     //var url = 'http://api.openweathermap.org/data/2.5/weather?lat=14.6102473&lon=121.0043158&appid=secret';
     //20.0252268081483, 73.76779917236001

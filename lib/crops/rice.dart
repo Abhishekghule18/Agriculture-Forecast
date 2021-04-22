@@ -31,6 +31,7 @@ class RiceData extends StatelessWidget {
                   Text(
                     'TEMPERATURE :',
                     style: TextStyle(
+                      color: Colors.blue,
                       fontSize: 18.0,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
@@ -53,6 +54,7 @@ class RiceData extends StatelessWidget {
                   Text(
                     'RAINFALL :',
                     style: TextStyle(
+                      color: Colors.blue,
                       fontSize: 18.0,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
