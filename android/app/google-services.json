@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "928848919825",
+    "project_id": "agrosmart-8e095",
+    "storage_bucket": "agrosmart-8e095.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928848919825:android:8adb5a7f126c7185c060b0",
+        "android_client_info": {
+          "package_name": "com.lost.agri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928848919825-l9j0tau6hrstc0fd9531fleagqvtc6st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3VoTvbSsYO0ACEdnSj43O0EGlBNqMFM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928848919825-l9j0tau6hrstc0fd9531fleagqvtc6st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

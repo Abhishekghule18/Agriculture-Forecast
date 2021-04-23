@@ -5,6 +5,7 @@ import 'package:agri/crops/sugarCane.dart';
 import 'package:agri/crops/wheat.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:agri/components/cropButton.dart';
 
 class CropList extends StatelessWidget {
   static const String id = 'crop_list';
@@ -52,32 +53,6 @@ class CropList extends StatelessWidget {
   }
 }
 
-class CropButton extends StatelessWidget {
-  CropButton({@required this.cropName, @required this.onPressed});
-
-  final Function onPressed;
-  final String cropName;
-  @override
-  Widget build(BuildContext context) {
-    return MaterialButton(
-      height: 40.0,
-      color: Colors.white,
-      onPressed: onPressed,
-      elevation: 0.9,
-      splashColor: Colors.grey,
-      child: Text(
-        cropName,
-        textAlign: TextAlign.left,
-        style: TextStyle(
-          fontSize: 22.0,
-          fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.w800,
-          color: Colors.black54,
-        ),
-      ),
-    );
-  }
-}
 // Column(
 // crossAxisAlignment: CrossAxisAlignment.stretch,
 // children: [
