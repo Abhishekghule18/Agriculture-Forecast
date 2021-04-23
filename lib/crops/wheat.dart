@@ -29,7 +29,7 @@ class WheatData extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'TEMPERATURE :',
+                    'Temperature :',
                     style: TextStyle(
                       color: Colors.blue,
                       fontSize: 18.0,
@@ -52,7 +52,7 @@ class WheatData extends StatelessWidget {
                     height: 10.0,
                   ),
                   Text(
-                    'RAINFALL :',
+                    'Rainfall :',
                     style: TextStyle(
                       color: Colors.blue,
                       fontSize: 18.0,
@@ -71,6 +71,29 @@ class WheatData extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text(
+                    'Cropping Season and Time Period :',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 18.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 2.0,
+                  ),
+                  Text(
+                    'Rabi \nSown: October-December\nHarvested: April-June ',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  )
                 ],
               ),
             ),
