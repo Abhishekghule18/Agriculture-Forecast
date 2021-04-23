@@ -7,7 +7,7 @@ class RiceData extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Cotton',
+          'Rice',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontStyle: FontStyle.italic,
